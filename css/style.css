@@ -26,6 +26,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -68,11 +69,13 @@ body {
 .list {
   list-style: none;
 }
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /* -----heder----- */
 .header {
-  height: 72px;
-  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 .header-nav {
@@ -82,6 +85,8 @@ body {
   display: flex;
 }
 .header-logo {
+  display: block;
+  padding: 24px 0;
   margin-right: 76px;
   font-family: 'Raleway';
   font-weight: 800;
@@ -100,6 +105,8 @@ body {
   gap: 40px;
 }
 .header-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -118,6 +125,8 @@ body {
 }
 .header-mail,
 .header-tel {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -155,12 +164,10 @@ body {
   color: var(--whitemain);
   /* BUTTON */
   display: block;
+  padding: 16px 32px;
   margin-top: 48px;
-  margin: 48px auto 0;
-  width: 169px;
-  height: 56px;
-  left: 636px;
-  top: 428px;
+  margin: 48px auto;
+  border: none;
   background: var(--primeryBrand);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -175,14 +182,19 @@ body {
 .advantage {
   padding: 120px 0;
 }
+.advantage-title {
+  display: none;
+}
+
 .advantage-list {
   display: flex;
   gap: 24px;
 }
-
-.advantage-title {
-  display: none;
+.advantage-item {
+  /* max-width: 264px; */
+  width: calc(100% / 4);
 }
+
 /* --------Tehnologiies-------- */
 .tehnologies {
   padding-bottom: 120px;
@@ -207,21 +219,13 @@ body {
   margin-top: 72px;
 }
 .team-item {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 0 0 32px;
-  justify-content: center;
-  align-items: center;
   background-color: var(--whitemain);
   box-shadow: var(--itemshedow);
   border-radius: 0px 0px 4px 4px;
 }
 .item-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 32px 16px;
 }
 
 /* footer */
@@ -258,12 +262,13 @@ body {
   padding: 96px 0 120px;
 }
 .filter h1 {
-  display: none;
+  visibility: hidden;
 }
 .filter-button {
   display: flex;
   gap: 24px;
   justify-content: center;
+  margin-bottom: 72px;
 }
 .filter-btn {
   padding: 12px 24px;
@@ -283,31 +288,25 @@ body {
 .filter-btn:focus {
   color: var(--whitemain);
   background: var(--pressed);
+  border: transparent;
 }
 .card-container {
   margin-top: -24px;
   margin-left: -24px;
 }
 .card-set {
-  margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -24px;
+  margin-top: -48px;
 }
 .card-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 32px;
-  padding: 0 0 32px;
-  margin-top: 24px;
+  margin-top: 48px;
   margin-left: 24px;
   flex-basis: calc(100% / 3 - 24px);
-  background: var(--whitemain);
-  border: 1px solid var(--accent);
-  overflow: hidden;
 }
 .card-content {
-  display: flex;
-  flex-direction: column;
-  margin-left: 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  padding: 32px 16px;
 }
